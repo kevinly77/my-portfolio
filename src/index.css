@@ -1,6 +1,8 @@
 @stylex stylesheet;
 
-
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   height: 100%;
@@ -18,8 +20,11 @@ html, body {
 }
 
 :root {
-
   background-color: black;
+  --purple-main: #B00580;
+  --cyan-main: #5EF6FF;
+  --font-main: "Zen Dots";
+  --font-accent: "Rajdhani";
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
