@@ -11,10 +11,12 @@ const styles = stylex.create({
     backgroundColor: "black",
     height: "100%",
     display: "flex",
+    gap: "2rem",
+    gridTemplateColumns: "auto 1fr",
+    paddingInline: "4rem",
     justifyContent: "center",
     alignItems: "center",
-    paddingInline: "2rem",
-    gap: "2rem",
+    //gap: "2rem",
     boxSizing: "border-box",
   },
   flag: {
@@ -23,11 +25,13 @@ const styles = stylex.create({
     padding: "1rem",
     boxShadow: "0px 4px 25px var(--purple-main)",
     backgroundColor: "rgba(176, 5, 128, 0.1)",
+    //backgroundColor: "rgba(94, 246, 255, 0.1)",
+    maxWidth: "fit-content",
     //padding: "5rem",
   },
 
   sidewaysName: {
-    color: "var(--purple-main)",
+    color: "var(--cyan-main)",
     fontFamily: "var(--font-main)",
     whiteSpace: "nowrap",
     writingMode: "vertical-lr",
@@ -39,7 +43,7 @@ const styles = stylex.create({
 
   sidewaysJapanese: {
     WebkitTextStrokeWidth: "2px",
-    WebkitTextStrokeColor: "var(--purple-main)",
+    WebkitTextStrokeColor: "var(--cyan-main)",
     //textShadow: "0px 4px 25px var(--purple-main)",
     fontFamily: "var(--font-main)",
     whiteSpace: "nowrap",
@@ -53,8 +57,10 @@ const styles = stylex.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    height: "fit-content",
     gap: "2rem",
+    //backgroundColor: "pink",
+    height: "100%",
+    width: "fit-content",
   },
 
   rightSide: {
@@ -62,9 +68,11 @@ const styles = stylex.create({
     boxSizing: "border-box",
     display: "flex",
     flexDirection: "column",
+    //alignItems: "center",
     //backgroundColor: "red",
     height: "100%",
-    width: "100%",
+    width: "fit-content",
+    //backgroundColor: "blue",
   },
 
   description: {
@@ -101,8 +109,8 @@ const styles = stylex.create({
     borderWidth: "0px 10px",
     borderImage: "url(/info-card.svg) 0 0 fill",
     //backgroundColor: "pink",
-    height: "fit-content",
-    width: "fit-content",
+    maxWidth: "60rem",
+    minWidth: "35rem",
     paddingTop: "1rem",
     paddingBottom: "1rem",
   },
@@ -133,6 +141,9 @@ const styles = stylex.create({
   infoCardAttribute: {
     display: "flex",
     gap: "0.5rem",
+    color: "var(--cyan-main)",
+    fontFamily: "var(--font-accent)",
+    fontSize: "1.5em",
   },
   divider: {
     border: "1px solid var(--purple-main)",
@@ -147,7 +158,6 @@ export default function HomePage() {
           <h1 {...stylex.props(styles.sidewaysName)}>KEVIN LY</h1>
           <h1 {...stylex.props(styles.sidewaysJapanese)}>はじめまして</h1>
         </div>
-
         <img alt="circles" src={Circles} />
       </div>
 
@@ -184,41 +194,33 @@ export default function HomePage() {
               <div {...stylex.props(styles.infoCardAttributes)}>
                 <div {...stylex.props(styles.infoCardAttribute)}>
                   <img src={BodyIcon} />
-                  <p>5</p>
+                  <p>4</p>
                   <p>BODY</p>
                 </div>
                 <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={BodyIcon} />
-                  <p>5</p>
-                  <p>BODY</p>
+                  <img src={IntelligenceIcon} />
+                  <p>8</p>
+                  <p>INTELLIGENCE</p>
                 </div>
                 <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={BodyIcon} />
-                  <p>5</p>
-                  <p>BODY</p>
+                  <img src={ReflexIcon} />
+                  <p>6</p>
+                  <p>REFLEX</p>
                 </div>
                 <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={BodyIcon} />
-                  <p>5</p>
-                  <p>BODY</p>
+                  <img src={TechnicalIcon} />
+                  <p>8</p>
+                  <p>TECHNICAL ABILITY</p>
                 </div>
                 <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={BodyIcon} />
-                  <p>5</p>
-                  <p>BODY</p>
+                  <img src={CoolIcon} />
+                  <p>10</p>
+                  <p>COOL</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* <div {...stylex.props(styles.descriptionWrapper)}>
-          <p {...stylex.props(styles.description)}>
-            Hey I’m Kevin and I like to code. I have a lot of experience doing
-            it. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim venian.
-          </p>
-        </div> */}
       </div>
     </div>
   );

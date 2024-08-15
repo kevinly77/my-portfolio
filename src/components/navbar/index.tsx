@@ -6,6 +6,7 @@ const styles = stylex.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: "1rem",
+    marginBottom: "3rem",
   },
 
   middlePill: {
