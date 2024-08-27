@@ -9,6 +9,7 @@ import {
 import Navbar from "./components/navbar";
 import HomePage from "./pages/home";
 import stylex from "@stylexjs/stylex";
+import ProjectsPage from "./pages/projects";
 
 const styles = stylex.create({
   layoutContainer: {

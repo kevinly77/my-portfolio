@@ -6,9 +6,10 @@ import IntelligenceIcon from "/intelligence-icon.svg";
 import ReflexIcon from "/reflex-icon.svg";
 import TechnicalIcon from "/technical-icon.svg";
 import CoolIcon from "/cool-icon.svg";
+import ProjectsPage from "../projects";
 const styles = stylex.create({
   container: {
-    backgroundColor: "black",
+    //backgroundColor: "black",
     height: "100%",
     display: "flex",
     gap: "2rem",
@@ -18,6 +19,8 @@ const styles = stylex.create({
     alignItems: "center",
     //gap: "2rem",
     boxSizing: "border-box",
+    //backgroundImage: "url(/.svg)",
+    backgroundRepeat: "repeat",
   },
   flag: {
     display: "flex",
@@ -152,76 +155,79 @@ const styles = stylex.create({
 });
 export default function HomePage() {
   return (
-    <div {...stylex.props(styles.container)}>
-      <div {...stylex.props(styles.leftSide)}>
-        <div {...stylex.props(styles.flag)}>
-          <h1 {...stylex.props(styles.sidewaysName)}>KEVIN LY</h1>
-          <h1 {...stylex.props(styles.sidewaysJapanese)}>はじめまして</h1>
+    <div>
+      <div {...stylex.props(styles.container)}>
+        <div {...stylex.props(styles.leftSide)}>
+          <div {...stylex.props(styles.flag)}>
+            <h1 {...stylex.props(styles.sidewaysName)}>KEVIN LY</h1>
+            <h1 {...stylex.props(styles.sidewaysJapanese)}>はじめまして</h1>
+          </div>
+          <img alt="circles" src={Circles} />
         </div>
-        <img alt="circles" src={Circles} />
-      </div>
 
-      <div {...stylex.props(styles.rightSide)}>
-        <div {...stylex.props(styles.infoCard)}>
-          <div {...stylex.props(styles.infoCardTextWrapper)}>
-            <div>
-              <p {...stylex.props(styles.infoCardHeader)}>NAME</p>
-              <hr {...stylex.props(styles.divider)} />
-              <p {...stylex.props(styles.infoCardDescription)}>Kevin Ly</p>
-            </div>
-            <div>
-              <p {...stylex.props(styles.infoCardHeader)}>OCCUPATION</p>
-              <hr {...stylex.props(styles.divider)} />
-              <p {...stylex.props(styles.infoCardDescription)}>
-                Software Developer / Netrunner
-              </p>
-            </div>
-            <div>
-              <p {...stylex.props(styles.infoCardHeader)}>BACK STORY</p>
-              <hr {...stylex.props(styles.divider)} />
-              <p {...stylex.props(styles.infoCardDescription)}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
-                purus ac libero finibus euismod. Sed blandit, nunc at tincidunt
-                tincidunt, nunc velit convallis nulla, id aliquet arcu tortor
-                vitae erat.
-              </p>
-            </div>
-            <div>
-              <p {...stylex.props(styles.infoCardHeader)}>
-                ATTRIBUTES OF CAPABILITY PREDISPOSITIONS
-              </p>
-              <hr {...stylex.props(styles.divider)} />
-              <div {...stylex.props(styles.infoCardAttributes)}>
-                <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={BodyIcon} />
-                  <p>4</p>
-                  <p>BODY</p>
-                </div>
-                <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={IntelligenceIcon} />
-                  <p>8</p>
-                  <p>INTELLIGENCE</p>
-                </div>
-                <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={ReflexIcon} />
-                  <p>6</p>
-                  <p>REFLEX</p>
-                </div>
-                <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={TechnicalIcon} />
-                  <p>8</p>
-                  <p>TECHNICAL ABILITY</p>
-                </div>
-                <div {...stylex.props(styles.infoCardAttribute)}>
-                  <img src={CoolIcon} />
-                  <p>10</p>
-                  <p>COOL</p>
+        <div {...stylex.props(styles.rightSide)}>
+          <div {...stylex.props(styles.infoCard)}>
+            <div {...stylex.props(styles.infoCardTextWrapper)}>
+              <div>
+                <p {...stylex.props(styles.infoCardHeader)}>NAME</p>
+                <hr {...stylex.props(styles.divider)} />
+                <p {...stylex.props(styles.infoCardDescription)}>Kevin Ly</p>
+              </div>
+              <div>
+                <p {...stylex.props(styles.infoCardHeader)}>OCCUPATION</p>
+                <hr {...stylex.props(styles.divider)} />
+                <p {...stylex.props(styles.infoCardDescription)}>
+                  Software Developer / Netrunner
+                </p>
+              </div>
+              <div>
+                <p {...stylex.props(styles.infoCardHeader)}>BACK STORY</p>
+                <hr {...stylex.props(styles.divider)} />
+                <p {...stylex.props(styles.infoCardDescription)}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  nec purus ac libero finibus euismod. Sed blandit, nunc at
+                  tincidunt tincidunt, nunc velit convallis nulla, id aliquet
+                  arcu tortor vitae erat.
+                </p>
+              </div>
+              <div>
+                <p {...stylex.props(styles.infoCardHeader)}>
+                  ATTRIBUTES OF CAPABILITY PREDISPOSITIONS
+                </p>
+                <hr {...stylex.props(styles.divider)} />
+                <div {...stylex.props(styles.infoCardAttributes)}>
+                  <div {...stylex.props(styles.infoCardAttribute)}>
+                    <img src={BodyIcon} />
+                    <p>4</p>
+                    <p>BODY</p>
+                  </div>
+                  <div {...stylex.props(styles.infoCardAttribute)}>
+                    <img src={IntelligenceIcon} />
+                    <p>8</p>
+                    <p>INTELLIGENCE</p>
+                  </div>
+                  <div {...stylex.props(styles.infoCardAttribute)}>
+                    <img src={ReflexIcon} />
+                    <p>6</p>
+                    <p>REFLEX</p>
+                  </div>
+                  <div {...stylex.props(styles.infoCardAttribute)}>
+                    <img src={TechnicalIcon} />
+                    <p>8</p>
+                    <p>TECHNICAL ABILITY</p>
+                  </div>
+                  <div {...stylex.props(styles.infoCardAttribute)}>
+                    <img src={CoolIcon} />
+                    <p>10</p>
+                    <p>COOL</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ProjectsPage />
     </div>
   );
 }
