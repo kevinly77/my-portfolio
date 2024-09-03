@@ -10,6 +10,7 @@ import Navbar from "./components/navbar";
 import HomePage from "./pages/home";
 import stylex from "@stylexjs/stylex";
 import ProjectsPage from "./pages/projects";
+import PageWrapper from "./components/page-wrapper";
 
 const styles = stylex.create({
 	layoutContainer: {
@@ -22,10 +23,10 @@ const styles = stylex.create({
 function Layout() {
 	return (
 		<div {...stylex.props(styles.layoutContainer)}>
-			<Navbar />
 			<div>
-				<HomePage />
-				<ProjectsPage />
+				<PageWrapper>
+					<HomePage />
+				</PageWrapper>
 			</div>
 		</div>
 	);
